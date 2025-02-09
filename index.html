@@ -3,112 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Quieres ser mi San Valentín?</title>
+    <title>Sara, ¿Quieres ser mi San Valentín?</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             text-align: center;
-            background-color: #ffe6e6;
+            background: url('https://source.unsplash.com/1600x900/?love,romantic') no-repeat center center/cover;
+            color: white;
             padding: 50px;
-            position: relative;
         }
         .container {
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             display: inline-block;
+            width: 80%;
+            max-width: 600px;
+            color: black;
         }
         h1 {
-            color: #ff4d4d;
+            color: #ff3366;
+        }
+        .reasons {
+            text-align: left;
+            max-height: 300px;
+            overflow-y: auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
         }
         .botones {
             margin-top: 20px;
         }
         .boton {
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 12px 20px;
+            font-size: 18px;
             color: white;
-            background-color: #ff4d4d;
+            background-color: #ff3366;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
+            transition: 0.3s;
+        }
+        .boton:hover {
+            background-color: #cc2950;
         }
         .boton.no {
             background-color: gray;
             position: absolute;
         }
+        .final {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 50px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>¿Quieres ser mi San Valentín? ❤️</h1>
-        <div class="botones">
-            <button class="boton" onclick="aceptar()">Sí ❤️</button>
-            <button class="boton no" onmouseover="moverBoton()">No 😢</button>
-        </div>
+        <h1>💖 Sara, ya que somos novios 💖</h1>
+        <p>Quiero aprovechar este San Valentín para expresarte lo feliz que me haces cada día. Estos 8 meses han sido los más increíbles de mi vida. Cada momento a tu lado ha sido una bendición, y me has mostrado lo que significa el amor verdadero. Me siento afortunado de compartir mi vida contigo, porque cada sonrisa, cada gesto y cada palabra que compartimos me llena de felicidad. Eres mi razón para seguir adelante, mi motivación y mi alegría. Lo que hemos vivido juntos ha sido hermoso, y lo mejor es que sé que este amor solo crecerá más con el tiempo. No importa lo que venga, quiero seguir construyendo recuerdos contigo, amándote más cada día. 💖</p>
     </div>
 
-    <script>
-        function aceptar() {
-            alert("¡Sabía que dirías que sí! 💖");
-        }
-
-        function moverBoton() {
-            let botonNo = document.querySelector(".boton.no");
-            let x = Math.random() * (window.innerWidth - 100);
-            let y = Math.random() * (window.innerHeight - 100);
-            botonNo.style.left = `${x}px`;
-            botonNo.style.top = `${y}px`;
-        }
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Quieres ser mi San Valentín?</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #ffe6e6;
-            padding: 50px;
-            position: relative;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-        }
-        h1 {
-            color: #ff4d4d;
-        }
-        .botones {
-            margin-top: 20px;
-        }
-        .boton {
-            padding: 10px 20px;
-            font-size: 16px;
-            color: white;
-            background-color: #ff4d4d;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .boton.no {
-            background-color: gray;
-            position: absolute;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>¿Quieres ser mi San Valentín? ❤️</h1>
+    <div class="container final">
+        <h1>💘 Sara, ¿quieres ser mi San Valentín? 💘</h1>
         <div class="botones">
             <button class="boton" onclick="aceptar()">Sí ❤️</button>
             <button class="boton no" onmouseover="moverBoton()">No 😢</button>
