@@ -5,79 +5,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sara, ¿Quieres ser mi San Valentín?</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap');
+
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             text-align: center;
-            background: url('https://source.unsplash.com/1600x900/?love,romantic') no-repeat center center/cover;
-            color: white;
-            padding: 50px;
+            background: linear-gradient(135deg, #ffdde1, #fbb1bd, #ff9aa2);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
         }
+
+        /* Efecto de partículas y corazones flotantes */
+        .particula {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: flotar 6s infinite linear;
+        }
+
+        .corazon {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(255, 0, 102, 0.7);
+            clip-path: polygon(50% 0%, 100% 35%, 85% 100%, 50% 80%, 15% 100%, 0% 35%);
+            animation: latir 2s infinite alternate ease-in-out;
+        }
+
+        @keyframes flotar {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-100vh); opacity: 0; }
+        }
+
+        @keyframes latir {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.2); }
+        }
+
         .container {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            display: inline-block;
-            width: 80%;
-            max-width: 600px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            max-width: 800px;
+            width: 90%;
             color: black;
+            position: relative;
+            z-index: 2;
+            animation: fadeIn 1s ease-in-out;
         }
+
         h1 {
-            color: #ff3366;
+            font-family: 'Playfair Display', serif;
+            color: #d81b60;
+            font-size: 38px;
         }
-        .reasons {
-            text-align: left;
-            max-height: 300px;
-            overflow-y: auto;
+
+        .message {
+            font-size: 22px;
+            line-height: 1.8;
+            color: #333;
+            font-style: italic;
+            text-align: justify;
+            padding: 20px;
             background: rgba(255, 255, 255, 0.8);
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+
         .botones {
-            margin-top: 20px;
+            margin-top: 30px;
         }
+
         .boton {
-            padding: 12px 20px;
-            font-size: 18px;
+            padding: 15px 35px;
+            font-size: 20px;
+            font-weight: bold;
             color: white;
-            background-color: #ff3366;
+            background: linear-gradient(135deg, #d81b60, #b71550);
             border: none;
-            border-radius: 8px;
+            border-radius: 50px;
             cursor: pointer;
-            transition: 0.3s;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .boton:hover {
-            background-color: #cc2950;
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(216, 27, 96, 0.5);
         }
+
         .boton.no {
             background-color: gray;
             position: absolute;
+            transition: all 0.3s ease;
         }
-        .final {
-            font-size: 24px;
+
+        .question {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            font-size: 34px;
             font-weight: bold;
-            margin-top: 50px;
+            color: #d81b60;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
+
+    <!-- Elementos flotantes -->
+    <script>
+        function crearElementos() {
+            for (let i = 0; i < 30; i++) {
+                let particula = document.createElement("div");
+                particula.classList.add("particula");
+                particula.style.left = `${Math.random() * 100}vw`;
+                particula.style.top = `${Math.random() * 100}vh`;
+                particula.style.animationDuration = `${Math.random() * 3 + 3}s`;
+                document.body.appendChild(particula);
+            }
+
+            for (let i = 0; i < 15; i++) {
+                let corazon = document.createElement("div");
+                corazon.classList.add("corazon");
+                corazon.style.left = `${Math.random() * 100}vw`;
+                corazon.style.top = `${Math.random() * 100}vh`;
+                corazon.style.animationDuration = `${Math.random() * 2 + 1.5}s`;
+                document.body.appendChild(corazon);
+            }
+        }
+
+        window.onload = crearElementos;
+    </script>
+
     <div class="container">
         <h1>💖 Sara, ya que somos novios 💖</h1>
-        <p>Quiero aprovechar este San Valentín para expresarte lo feliz que me haces cada día. Estos 8 meses han sido los más increíbles de mi vida. Cada momento a tu lado ha sido una bendición, y me has mostrado lo que significa el amor verdadero. Me siento afortunado de compartir mi vida contigo, porque cada sonrisa, cada gesto y cada palabra que compartimos me llena de felicidad. Eres mi razón para seguir adelante, mi motivación y mi alegría. Lo que hemos vivido juntos ha sido hermoso, y lo mejor es que sé que este amor solo crecerá más con el tiempo. No importa lo que venga, quiero seguir construyendo recuerdos contigo, amándote más cada día. 💖</p>
+        <p class="message">
+            Sarita, como tú lo pediste, quería que este mensaje fuera especial,
+            así que aprendí a hacer esto. Lo siento por no hacerlo en persona,
+            pero es que, honestamente, nunca me imaginé haciendo algo así, y menos con alguien
+            que ya es mi novia. Pero como eres tú, estoy seguro de que vale la pena,
+            porque en estos 8 meses me has hecho sentir como si estuviera en
+            la cima del mundo. 
+
+            O sea, sé que antes no lo era, pero sabes, yo tenía límites,
+            y solía pensar menos de mí. Pero desde que estoy contigo,
+            ya no me siento como que soy menos, me siento como lo que siempre quise:
+            amado por alguien como tú. 
+
+            💖
+        </p>
+
+        <div class="botones">
+            <button class="boton" onclick="aceptar()">Obviamente, eres el mejor novio del mundo</button>
+            <button class="boton no" onmouseover="moverBoton()">No, soy tonta</button>
+        </div>
     </div>
 
-    <div class="container final">
-        <h1>💘 Sara, ¿quieres ser mi San Valentín? 💘</h1>
-        <div class="botones">
-            <button class="boton" onclick="aceptar()">Sí ❤️</button>
-            <button class="boton no" onmouseover="moverBoton()">No 😢</button>
-        </div>
+    <div class="question">
+        💘 Sara, ¿quieres ser mi San Valentín? 💘
     </div>
 
     <script>
         function aceptar() {
-            alert("¡Sabía que dirías que sí! 💖");
+            alert("¡Viste que pasaba si decías que no! Si ya sabes Estoy ofendido 💖");
         }
 
         function moverBoton() {
