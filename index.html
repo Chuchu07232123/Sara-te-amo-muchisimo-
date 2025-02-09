@@ -21,7 +21,7 @@
             overflow: hidden;
         }
 
-        /* Fondo animado */
+        /* Fondo animado con textura suave */
         .fondo {
             position: absolute;
             width: 100%;
@@ -121,13 +121,6 @@
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
-        /* Efecto parallax */
-        .parallax {
-            position: absolute;
-            transition: transform 0.1s ease-out;
-        }
-
     </style>
 </head>
 <body>
@@ -142,6 +135,8 @@
                 'https://www.kindpng.com/picc/m/52-525234_cute-teddy-bear-png-image-with-transparent-background.png',
                 'https://pngimg.com/uploads/teddy_bear/teddy_bear_PNG27.png'
             ];
+
+            // Agregar los elementos con imágenes
             for (let i = 0; i < 10; i++) {
                 let elemento = document.createElement("img");
                 elemento.src = imagenes[Math.floor(Math.random() * imagenes.length)];
@@ -168,7 +163,7 @@
     </script>
 
     <div class="container">
-        <h1>💖 Sara, ya que somos novios 💖</h1>
+        <h1>💗 Sara, ya que somos novios 💗</h1>
         <p class="message">
             Sarita, estos 8 meses han sido los más lindos de mi vida. 
             Aprendí a hacer esto solo para ti, porque quiero demostrarte cuánto te amo. 
@@ -178,7 +173,7 @@
             Espero que sin importar lo que pase, siempre recuerdes que te amo y 
             que quiero hacerte feliz.  
 
-            💖
+            💗
         </p>
 
         <div class="botones">
@@ -188,12 +183,12 @@
     </div>
 
     <div class="question">
-        💘 Sara, ¿quieres ser mi San Valentín? 💘
+        💗 Sara, ¿quieres ser mi San Valentín? 💗
     </div>
 
     <script>
         function aceptar() {
-            alert("¡Te amooooooooooooooooooooooooo! 💖");
+            alert("¡Sabía que dirías que sí! 💖");
         }
 
         function moverBoton() {
