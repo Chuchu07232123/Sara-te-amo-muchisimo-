@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            padding: 50px;
+            position: relative;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        h1 {
+            color: #ff4d4d;
+        }
+        .botones {
+            margin-top: 20px;
+        }
+        .boton {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #ff4d4d;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .boton.no {
+            background-color: gray;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Quieres ser mi San Valentín? ❤️</h1>
+        <div class="botones">
+            <button class="boton" onclick="aceptar()">Sí ❤️</button>
+            <button class="boton no" onmouseover="moverBoton()">No 😢</button>
+        </div>
+    </div>
+
+    <script>
+        function aceptar() {
+            alert("¡Sabía que dirías que sí! 💖");
+        }
+
+        function moverBoton() {
+            let botonNo = document.querySelector(".boton.no");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 100);
+            botonNo.style.left = `${x}px`;
+            botonNo.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            padding: 50px;
+            position: relative;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        h1 {
+            color: #ff4d4d;
+        }
+        .botones {
+            margin-top: 20px;
+        }
+        .boton {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #ff4d4d;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .boton.no {
+            background-color: gray;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Quieres ser mi San Valentín? ❤️</h1>
+        <div class="botones">
+            <button class="boton" onclick="aceptar()">Sí ❤️</button>
+            <button class="boton no" onmouseover="moverBoton()">No 😢</button>
+        </div>
+    </div>
+
+    <script>
+        function aceptar() {
+            alert("¡Sabía que dirías que sí! 💖");
+        }
+
+        function moverBoton() {
+            let botonNo = document.querySelector(".boton.no");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 100);
+            botonNo.style.left = `${x}px`;
+            botonNo.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
