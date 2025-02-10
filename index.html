@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sara, ¿Quieres ser mi San Valentín?</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
         body {
-            font-family: 'Dancing Script', cursive;
+            font-family: 'Great Vibes', cursive;
             text-align: center;
             background: linear-gradient(135deg, #ffd6e0, #ffb3c6, #ff8aa4);
             margin: 0;
@@ -21,7 +21,6 @@
             overflow: hidden;
         }
 
-        /* Elementos decorativos interactivos */
         .elemento {
             position: absolute;
             width: 50px;
@@ -102,7 +101,6 @@
             font-family: 'Great Vibes', cursive;
         }
 
-        /* Animaciones */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -111,7 +109,6 @@
 </head>
 <body>
 
-    <!-- Elementos flotantes interactivos -->
     <script>
         function crearElementos() {
             let imagenes = [
@@ -119,9 +116,9 @@
                 'https://i.pinimg.com/originals/92/d6/3d/92d63d85a1e7767fae4b3b0b2ac64504.jpg',
                 'https://www.kindpng.com/picc/m/52-525234_cute-teddy-bear-png-image-with-transparent-background.png',
                 'https://pngimg.com/uploads/teddy_bear/teddy_bear_PNG27.png',
-                'https://upload.wikimedia.org/wikipedia/en/0/0d/Beauty_and_the_Beast_1991_poster.jpg', // Added Princess Bella
-                'https://pngimg.com/uploads/heart/heart_PNG51332.png', // Added Heart
-                'https://pngimg.com/uploads/rose/rose_PNG6354.png' // Added Flower
+                'https://upload.wikimedia.org/wikipedia/en/0/0d/Beauty_and_the_Beast_1991_poster.jpg',
+                'https://pngimg.com/uploads/heart/heart_PNG51332.png',
+                'https://pngimg.com/uploads/rose/rose_PNG6354.png'
             ];
             for (let i = 0; i < 10; i++) {
                 let elemento = document.createElement("img");
